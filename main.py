@@ -112,6 +112,7 @@ class PuzzleGUI:
             return
 
         print("Statistics:", stats)
+        print("Path",self.path)
         self.current_step = 0
         self.update_board(self.path[self.current_step])
         self.next_btn.config(state=tk.NORMAL)  # Enable "Next Step" button

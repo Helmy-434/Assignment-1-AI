@@ -3,9 +3,9 @@ import time
 from helpers import *
 
 def bfs(start):
-    start_time = time.time()
-    frontier = deque([[start]]) 
-    visited = {start} 
+    start_time = time.time() 
+    frontier = deque([[start]])  
+    visited = {start}  
     nodes_expanded = 0
     max_depth = 0
 
