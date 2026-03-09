@@ -1,6 +1,10 @@
 import tkinter as tk
 from tkinter import messagebox
+
+from A_Star import A_star_main
 from bfs import bfs
+from DFS import dfs
+from DFS import idfs
 from helpers import GOAL_STATE, states
 import random
 
@@ -97,13 +101,13 @@ class PuzzleGUI:
         if algo == "BFS":
             self.path, stats = bfs(start_state)
         elif algo == "DFS":
-            print("get me a path and stats, and i will literally do everything you wisj")
+            self.path, stats = dfs(start_state)
         elif algo == "IDFS":
-            print("get me a path and stats, and i will literally do everything you wisj")
+            self.path, stats = idfs(start_state)
         elif algo == "A* Manhattan":
-            print("get me a path and stats, and i will literally do everything you wisj")
+            self.path,stats = A_star_main(start_state,0)
         elif algo == "A* Euclidean":
-            print("get me a path and stats, and i will literally do everything you wisj")
+            self.path,stats = A_star_main(start_state,1)
         else:
             return
 
